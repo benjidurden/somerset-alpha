@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 class About extends Component {
   render() {
     return (
-      <div>
+      <div className = "animated fadeIn">
         <Link to="/" className="arrow">
         <a className = "underline">
           ←
           </a>
         </Link>
-        <h3>
-          Somerset is a duo consisting of Ayodeji Ogunlana & Gian Nazario. It is
-          a platform for releases and hosting creative content.
-        </h3>
+        <p className = "somersetInfo">
+          <b>Somerset</b> is a duo consisting of <b>Ayodeji Ogunlana & Gian Nazario.</b> It is
+          a platform for releasing and hosting creative content.
+        </p>
         <br />
         <h3>Credits</h3>
         <ul>

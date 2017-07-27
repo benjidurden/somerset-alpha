@@ -97,11 +97,13 @@ h2 > a:hover:before {
 }
 
 .septemberIcon {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
+  padding-right: 40px;
 }
 
 .trilogyIcon {
-  width: 300px;
-  height: 300px;
+  width: 150px;
+  height: 150px;
+  padding-left: 15px;
 }

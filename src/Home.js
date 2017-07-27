@@ -13,7 +13,7 @@ const styles = {
 class Home extends Component {
   render() {
     return (
-      <div style={styles}>
+      <div style={styles} className = "animated fadeIn">
         <img
           src="http://i.imgur.com/S4g0E2v.jpg"
           alt="somersetLogo"
@@ -28,14 +28,14 @@ class Home extends Component {
         </h2>
         <Link to = "/september/">
         <img
-          src="http://i.imgur.com/JPRCqmS.png"
+          src="http://i.imgur.com/XqNaGeS.jpg"
           alt="septemberLogo"
           className="septemberIcon"
         />
         </Link>
         <Link to = "/trilogy/">
         <img
-          src="http://i.imgur.com/BEDChzk.png"
+          src="http://i.imgur.com/qrGw0kw.png"
           alt="trilogyLogo"
           className="trilogyIcon"
         />
