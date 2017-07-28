@@ -22,7 +22,7 @@ class Trilogy extends Component {
         </Link>
         <div className = "spacing">
         </div>
-       <iframe width="853" height="480" src="https://www.youtube.com/embed/videoseries?list=PLc2w7lxyt6T8fQzsg93ZXRJlgz05ihK2H&rel=0" frameBorder="0" allowFullScreen></iframe> 
+       <iframe width="853" height="480" width = "100%" title = "premiere" src="https://www.youtube.com/embed/videoseries?list=PLc2w7lxyt6T8fQzsg93ZXRJlgz05ihK2H&rel=0" frameBorder="0" allowFullScreen></iframe> 
       </div>
     );
   }
