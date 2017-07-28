@@ -31,7 +31,9 @@ class September extends Component {
       <div>
         <Link to="/" className="arrow">
         <a className = "theatre_underline" onClick = {this.fadeOut}>
+        <span>
           ←
+          </span>
           </a>
         </Link>
         <div className = "spacing">

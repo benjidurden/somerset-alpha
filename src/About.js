@@ -6,8 +6,8 @@ class About extends Component {
     return (
       <div className = "animated fadeIn">
         <Link to="/" className="arrow">
-        <a className = "underline">
-          ←
+        <a className = "underline"><span>
+          ←</span>
           </a>
         </Link>
         <p className = "somersetInfo">
