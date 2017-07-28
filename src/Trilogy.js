@@ -14,19 +14,15 @@ const styles = {
 class Trilogy extends Component {
   render() {
     return (
-      <div className="video-container">
+      <div className="vidcontainer">
         <Link to="/" className="arrow">
-        <a className = "underline">
+        <a className = "theatre_underline">
           ←
           </a>
         </Link>
-        <h1>September Trilogy</h1>
-        <object
-          style={styles}
-          data="https://www.youtube.com/embed/8ZRVGnkSAnk?list=PLc2w7lxyt6T8fQzsg93ZXRJlgz05ihK2H&rel=0"
-          allowFullScreen="allowFullScreen"
-          frameBorder="0"
-        />
+        <div className = "spacing">
+        </div>
+       <iframe width="853" height="480" src="https://www.youtube.com/embed/videoseries?list=PLc2w7lxyt6T8fQzsg93ZXRJlgz05ihK2H&rel=0" frameBorder="0" allowFullScreen></iframe> 
       </div>
     );
   }
