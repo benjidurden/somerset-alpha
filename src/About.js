@@ -15,7 +15,7 @@ class About extends Component {
           </a>
         </Link>
         <p className = "somersetInfo">
-          <b>Somerset is a duo consisting of Ayodeji Ogunlana & Gian Nazario. It is
+          <b>Somerset Productions is a duo consisting of Ayodeji Ogunlana & Gian Nazario. It is
           a platform for releasing and hosting creative content.</b>
         </p>
         <br />
