@@ -30,10 +30,15 @@ class September extends Component {
      showWebsite: false,
     }
     this.fadeOut = this.fadeOut.bind(this);
-    this.startDate = Date.now() + 5000
+    this.startDate = new Date(1501369200000 * 50)
   }
    componentDidMount = () => {
-  setInterval(() => this.checkTime(), 1000)
+  this.loadInterval = setInterval(() => this.checkTime(), 1000)
+   }
+   componentWillUnmount = () => {
+   this.loadInterval && this.setState({
+     showWebsite: false
+   })
    }
   fadeOut = () => {
     this.setState({redirect: true});
@@ -48,7 +53,7 @@ class September extends Component {
     return (
       <div id = "timer">
         <object className = "timerInput">
-        <Countdown date = {Date.now() + 5000} renderer = {renderer}/>
+        <Countdown date = {new Date(1501369200000 * 50)} renderer = {renderer}/>
         </object>
       </div>
     );

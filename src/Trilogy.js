@@ -30,7 +30,7 @@ class Trilogy extends Component {
      showWebsite: false,
     }
     this.fadeOut = this.fadeOut.bind(this);
-    this.startDate = Date.now() + 5000
+    this.startDate = new Date (1501369200000 * 50)
   }
    componentDidMount = () => {
   setInterval(() => this.checkTime(), 1000)
@@ -48,7 +48,7 @@ class Trilogy extends Component {
     return (
       <div id = "timer">
         <object className = "timerInput">
-        <Countdown date = {Date.now() + 5000} renderer = {renderer}/>
+        <Countdown date = {new Date(1501369200000 * 50)} renderer = {renderer}/>
         </object>
       </div>
     );
