@@ -6,6 +6,8 @@ import Home from "./Home";
 import About from "./About";
 import Trilogy from "./Trilogy";
 import September from "./September";
+import SeptemberVideo from './SeptemberVideo';
+import TrilogyVideo from './TrilogyVideo';
 
 const styles = {
   fontFamily: "sans-serif",
@@ -22,6 +24,8 @@ class App extends Component {
             <Route exact path="/about/" component={About} />
             <Route exact path="/trilogy/" component={Trilogy} />
             <Route exact path="/september/" component={September} />
+            <Route exact path = "/september/premiere/" component = {SeptemberVideo} />
+            <Route exact path = "/trilogy/premiere/" component = {TrilogyVideo} />
           </Switch>
         </div>
       </Router>

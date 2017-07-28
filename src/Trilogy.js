@@ -1,47 +1,59 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import Countdown from 'react-countdown-now';
+import TrilogyVideo from './TrilogyVideo';
 
 const styles = {
   width: "100%",
   height: "100%",
-  width: "1280px",
+  width: "800px",
   height: "720px",
   float: "none",
   clear: "both",
   margin: "2px auto"
 };
 
+const renderer =  ({hours, minutes, seconds, completed}) => {
+  if (completed) {
+   document.getElementById("timer").style.display = "none";
+   return <Redirect to = "/trilogy/premiere/" />
+  } else {
+    return <span>{hours}:{minutes}:{seconds}</span>;
+  }
+};
+
+
 class Trilogy extends Component {
-  constructor(props){
-    super(props);
+   constructor(props){
+   super(props);
     this.state = {
-     redirect: false,
+     showWebsite: false,
     }
     this.fadeOut = this.fadeOut.bind(this);
+    this.startDate = Date.now() + 5000
   }
-  componentDidMount = () => {
-    document.body.className = "vidcontainer";
-  }
+   componentDidMount = () => {
+  setInterval(() => this.checkTime(), 1000)
+   }
   fadeOut = () => {
     this.setState({redirect: true});
     document.body.className = this.state.redirect
   }
+  checkTime = () => {
+    if (Date.now() >= this.startDate){
+      this.setState({redirect: true})
+    }
+  }
   render() {
     return (
-      <div>
-        <Link to="/" className="arrow">
-        <a className = "theatre_underline" onClick = {this.fadeOut}>
-        <span>
-          ←
-          </span>
-          </a>
-        </Link>
-        <div className = "spacing">
-        </div>
-       <iframe width="853" height="480" width = "100%" title = "premiere" src="https://www.youtube.com/embed/videoseries?list=PLc2w7lxyt6T8fQzsg93ZXRJlgz05ihK2H&rel=0" frameBorder="0" allowFullScreen></iframe> 
+      <div id = "timer">
+        <object className = "timerInput">
+        <Countdown date = {Date.now() + 5000} renderer = {renderer}/>
+        </object>
       </div>
     );
   }
 }
 
 export default Trilogy;
+

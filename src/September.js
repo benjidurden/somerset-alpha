@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect} from "react-router-dom";
+import Countdown from 'react-countdown-now';
+import SeptemberVideo from './SeptemberVideo.js';
 
 const styles = {
   width: "100%",
@@ -11,35 +13,43 @@ const styles = {
   margin: "2px auto"
 };
 
+const renderer =  ({hours, minutes, seconds, completed}) => {
+  if (completed) {
+   document.getElementById("timer").style.display = "none";
+   return <Redirect to = "/september/premiere/" />
+  } else {
+    return <span>{hours}:{minutes}:{seconds}</span>;
+  }
+};
+
+
 class September extends Component {
    constructor(props){
    super(props);
     this.state = {
-     redirect: false,
+     showWebsite: false,
     }
     this.fadeOut = this.fadeOut.bind(this);
+    this.startDate = Date.now() + 5000
   }
-  componentDidMount = () => {
-    document.body.className = "vidcontainer";
-  }
+   componentDidMount = () => {
+  setInterval(() => this.checkTime(), 1000)
+   }
   fadeOut = () => {
     this.setState({redirect: true});
     document.body.className = this.state.redirect
   }
+  checkTime = () => {
+    if (Date.now() >= this.startDate){
+      this.setState({redirect: true})
+    }
+  }
   render() {
     return (
-      <div>
-        <Link to="/" className="arrow">
-        <a className = "theatre_underline" onClick = {this.fadeOut}>
-        <span>
-          ←
-          </span>
-          </a>
-        </Link>
-        <div className = "spacing">
-        </div>
-       <iframe width="853" height="480" width="100%" title="premiere"
-       src="https://www.youtube.com/embed/yQbOrE6woB8?rel=0" frameBorder="0" allowFullScreen></iframe>
+      <div id = "timer">
+        <object className = "timerInput">
+        <Countdown date = {Date.now() + 5000} renderer = {renderer}/>
+        </object>
       </div>
     );
   }
