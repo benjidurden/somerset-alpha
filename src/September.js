@@ -12,11 +12,25 @@ const styles = {
 };
 
 class September extends Component {
+   constructor(props){
+   super(props);
+    this.state = {
+     redirect: false,
+    }
+    this.fadeOut = this.fadeOut.bind(this);
+  }
+  componentDidMount = () => {
+    document.body.className = "vidcontainer";
+  }
+  fadeOut = () => {
+    this.setState({redirect: true});
+    document.body.className = this.state.redirect
+  }
   render() {
     return (
-      <div className="vidcontainer">
+      <div>
         <Link to="/" className="arrow">
-        <a className = "theatre_underline">
+        <a className = "theatre_underline" onClick = {this.fadeOut}>
           ←
           </a>
         </Link>

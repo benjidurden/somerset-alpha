@@ -155,6 +155,8 @@ h2 > a:hover:before {
   animation-duration: 3s;
   animation-direction: normal;
   animation-fill-mode: forwards;
+  margin: 0;
+  padding: 50px;
 }
 
 @keyframes change_color {
