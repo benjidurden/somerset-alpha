@@ -5,9 +5,8 @@ import September from "./September";
 import Trilogy from "./Trilogy";
 
 const styles = {
-  fontFamily: "sans-serif",
+  fontFamily: "helvetica",
   textAlign: "center",
-  color: "orange"
 };
 
 class Home extends Component {
