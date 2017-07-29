@@ -20,7 +20,7 @@ class About extends Component {
         </p>
         <br />
         <h3>Credits</h3>
-        <ul>
+        <ul className = "listcontainer">
           <li>
            <b>September</b>
           </li>
@@ -69,6 +69,15 @@ class About extends Component {
             </b>
           </p>
         </ul>
+        <div>
+                <img
+          src="http://i.imgur.com/mX70mmc.png"
+          alt="somersetPoster"
+          className="somersetPoster"
+          width = "800"
+          height = "800"
+        />
+        </div>
       </div>
     );
   }

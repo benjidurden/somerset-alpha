@@ -13,6 +13,22 @@
   font-weight: bold;
 }
 
+.listcontainer {
+  display: inline;
+}
+
+.somersetPoster {
+  display: block;
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  left: 0;
+  margin-left: 550px;
+  position: absolute;
+  bottom: -25px;
+}
+
 .arrow {
   text-decoration: none;
   color: #000000;
