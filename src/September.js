@@ -52,6 +52,11 @@ class September extends Component {
   render() {
     return (
       <div id = "timer">
+        <Link to="/" className="arrow">
+        <a className = "underline"><span id = "timer-direct">
+          ←</span>
+          </a>
+        </Link>
         <object className = "timerInput">
         <Countdown date = {new Date(1501369200000 * 50)} renderer = {renderer}/>
         </object>

@@ -86,6 +86,10 @@
   color: white;
 }
 
+#timer-direct  {
+  font-size: 70px;
+}
+
 .theatre_underline:hover:before {
    visibility: visible;
   -webkit-transform: scaleX(1);
@@ -196,10 +200,35 @@ h2 > a:hover:before {
 };
 
 @-webkit-keyframes color_change {
-	from { background: white; }
-	to { background: black; }
+  from { background: white; }
+  to { background: black; }
 }
 
 #fadeArrow {
   color: white;
+}
+
+/* React media queries (for mobile site)  */
+/* main page: tablet and mobile media query  */
+/* move september and trilogy to bottom, move poster to bottom  */
+@media screen and (max-width: 500px) {
+ .septemberIcon {
+  display: block;
+  margin: 0 auto;
+  padding-left: 30px;
+ }
+ .trilogyIcon {
+ display: block;
+ margin: 0 auto;
+ padding-right: 20px;
+ }
+ .somersetPoster {
+
+ }
+}
+
+@media screen and (max-width: 768px) {
+.somersetPoster {
+
+}
 }
