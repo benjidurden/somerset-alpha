@@ -26,7 +26,7 @@
   left: 170px;
   margin-left: 550px;
   position: absolute;
-  bottom: -25px;
+  bottom: 40px;
 }
 
 .arrow {
@@ -132,11 +132,12 @@ span {
   transform: scaleX(1);
 }
 
-
 .somersetIcon {
   width: 150px;
   height: 150px;
 }
+
+
 h2 > a {
   text-decoration: none;
   color: black;
@@ -223,12 +224,18 @@ h2 > a:hover:before {
  padding-right: 20px;
  }
  .somersetPoster {
-
+  left: 0px;
+  margin-left: 0px;
+  bottom: 0px;
+  position: relative;
  }
 }
 
 @media screen and (max-width: 768px) {
 .somersetPoster {
-
+  left: 0px;
+  margin-left: 0px;
+  bottom: 0px;
+  position: relative;
 }
 }

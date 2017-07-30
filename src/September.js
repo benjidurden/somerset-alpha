@@ -30,7 +30,7 @@ class September extends Component {
      showWebsite: false,
     }
     this.fadeOut = this.fadeOut.bind(this);
-    this.startDate = new Date(1501369200000 * 50)
+    this.startDate = new Date(15013692000000 * 2.4)
   }
    componentDidMount = () => {
   this.loadInterval = setInterval(() => this.checkTime(), 1000)
@@ -58,7 +58,7 @@ class September extends Component {
           </a>
         </Link>
         <object className = "timerInput">
-        <Countdown date = {new Date(1501369200000 * 50)} renderer = {renderer}/>
+        <Countdown date = {new Date(15013692000000 * 2.4)} renderer = {renderer}/>
         </object>
       </div>
     );
