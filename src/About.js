@@ -31,7 +31,9 @@ class About extends Component {
               <br />
               Director Of Photography & Editor: Ayodeji Ogunlana
               <br />
-              Story & Music by GN.
+              Story by Gian Nazario
+              <br />
+              Music by GN. & Money Korine
               <br />
             </i>
             </b>
